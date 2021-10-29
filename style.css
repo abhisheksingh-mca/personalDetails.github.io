@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #b1bfd8;
+    background-image: linear-gradient(315deg, #b1bfd8 0%, #6782b4 74%);
+}
+.adduser{
+    max-width: 1000px;
+    margin: 50px auto;
+    position: relative;
+    box-shadow: 0 10px 30px 0px rgb(0, 0, 0,1);
+    padding: 30px;
+    background: #fff;
+}
+.adduser .title{
+    text-transform: uppercase;
+    /* text-align: center; */
+    left: 0;
+    letter-spacing: 3px;
+    font-size: 2em;
+    line-height: 48px;
+    padding-bottom: 20px;
+    color: #5543ca;
+    background: linear-gradient(to right, #f4524d 0%, #5543ca 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.conctact-from .form-field{
+    position: relative;
+    margin: 32px 0;
+}
+.conctact-from .input-text{
+    display: block;
+    width: 100%;
+    height: 36px;
+    border-width: 0 0 1px 0;
+    border-color: #5543ca;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+
+}
+.conctact-from .input-text:focus{
+    outline: none;
+}
+.conctact-from .form-field .date{
+    color: #5543ca;
+}
+.conctact-from .lable{
+    
+    left: 20px;
+    bottom: 11px;
+    line-height: 25px;
+    font-weight: 400;
+    color: #5543ca;
+    cursor: text;
+    text-transform: capitalize;
+    transition: transform 0.2 ease-in-out;
+}
+.conctact-from .submit-btn{
+    outline: none;
+    display: block;
+    border: 0;
+    font-size: 16px;
+    line-height: 1;
+    padding: 12px 35px;
+    border-radius: 30px;
+    background: #27b857;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+.conctact-from .submit-btn:hover{
+    box-shadow: 3px 3px 10px black;
+}
+.conctact-from .form-field .gen{
+    max-width: 40%;
+}
+.conctact-from .form-field select{
+    border: 1px solid #5543ca;
+}
+.conctact-from .form-field .form-check .form-check-label{
+    color: #5543ca;
+}
+.conctact-from .form-field select option{
+    left: 20px;
+    bottom: 11px;
+    line-height: 25px;
+    font-weight: 400;
+    color: #5543ca;
+    cursor: text;
+}
