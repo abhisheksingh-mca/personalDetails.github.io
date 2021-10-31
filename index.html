@@ -15,41 +15,49 @@
     <h1 class="title">Add A new User</h1>
 
     <div class="container">
+      <form onsubmit="return validate()" novalidate action="javascript:alert( 'User Successfully Added !' );">
       <div class="conctact-from row">
         <div class="form-field col-lg-6">
-          <label for="fname" class="lable">First Name</label>
-          <input id="fname" class="input-text" type="text" name="" id="" required>
+          <label for="fname" id="name1" class="lable">First Name</label>
+          <input id="fname" class="input-text fname-field" type="text" required>
+          <p class="fname-field-msg text-danger ml-2"></p>
         </div>
         <div class="form-field col-lg-6">
           <label for="lname" class="lable">last Name</label>
-          <input id="lname" class="input-text" type="text" name="" id="">
+          <input id="lname" class="input-text lname-field" type="text" required>
+          <p class="lname-field-msg text-danger ml-2"></p>
         </div>
         <div class="form-field col-lg-6">
           <label for="fathername" class="lable">Father Name</label>
-          <input id="fathername" class="input-text" type="text" name="" id="">
+          <input id="fathername" class="input-text fat-field" type="text" required>
+          <p class="fat-field-msg text-danger ml-2"></p>
         </div>
         <div class="form-field col-lg-6">
           <label for="mothername" class="lable">Mother Name</label>
-          <input id="mothername" class="input-text" type="text" name="" id="">
+          <input id="mothername" class="input-text mot-field" type="text" required>
+          <p class="mot-field-msg text-danger ml-2"></p>
         </div>
         <div class="form-field col-lg-6">
-          <label for="gender" class="lable w-25">Gender</label>
+          <label for="gender" class="lable w-25 sexSelect">Gender</label>
           <div class="form-check w-25 form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-            <label class="form-check-label" for="inlineRadio1">Male</label>
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="male" value="option1">
+            <label class="form-check-label male" for="inlineRadio1">Male</label>
           </div>
           <div class="form-check w-25 form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-            <label class="form-check-label" for="inlineRadio2">Female</label>
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="female" value="option2">
+            <label class="form-check-label female" for="inlineRadio2">Female</label>
           </div>
+          <p class="gen-field-msg text-danger ml-2"></p>
         </div>
         <div class="form-field col-lg-6">
           <label for="employeeid" class="lable">Employee ID</label>
-          <input id="employeeid" class="input-text" type="text" name="" id="">
+          <input id="employeeid" class="input-text emp-field" type="text" required>
+          <p class="emp-field-msg text-danger ml-2"></p>
         </div>
         <div class="form-field col-lg-6">
-          <label for="email" class="lable">Email</label>
-          <input id="email" class="input-text" type="email" name="" id="">
+          <label for="email" class="lable ">Email</label>
+          <input id="email" class="input-text email-field" type="email" name="" id="">
+          <p class="email-field-msg text-danger ml-2"></p>
         </div>
         <div class="form-field col-lg-6">
           <label for="alternateemail" class="lable">Alternate Email</label>
@@ -57,22 +65,25 @@
         </div>
         <div class="form-field col-lg-6">
           <label for="alternateemail" class="lable w-50">Date of birth</label>
-          <input type="date" class="date">
+          <input type="date" class="dateBirth">
+          <p class="DoB-field-msg text-danger ml-2"></p>
         </div>
         <div class="form-field col-lg-6">
           <label for="gender" class="lable w-25">Matrial status</label>
           <div class="form-check form-check-inline ml-5">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+            <input class="form-check-input" type="radio" name="Group1" id="Married" value="option1">
             <label class="form-check-label w-25" for="inlineRadio1">Married</label>
           </div>
           <div class="form-check form-check-inline ml-5">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            <input class="form-check-input" type="radio" name="Group1" id="Unmarried" value="option2">
             <label class="form-check-label " for="inlineRadio2">Unmarried</label>
           </div>
+          <p class="mat-field-msg text-danger ml-2"></p>
         </div>
         <div class="form-field col-lg-6">
           <label for="Mobile" class="lable">Mobile</label>
-          <input id="moblie" class="input-text" type="tel" name="" id="">
+          <input id="moblie" class="input-text mobile" type="tel" name="" id="">
+          <p class="mob-field-msg text-danger ml-2"></p>
         </div>
         <div class="form-field col-lg-6">
           <label for="alternatenumber" class="lable">Alternate Moblie</label>
@@ -80,35 +91,39 @@
         </div>
         <div class="form-field col-lg-6">
           <label class="lable w-25">Cast/Color</label>
-          <select class="custom-select w-50 form-select-sm" id="inputGroupSelect01">
-            <option value="" disabled selected>Enter Cast...</option>
-            <option value="1">...</option>
-            <option value="2">...</option>
-            <option value="3">...</option>
+          <select class="custom-select w-50 form-select-sm" id="inputGroupSelect01" name="cast">
+            <option value="0"  selected>Enter Cast...</option>
+            <option value="1">GEN</option>
+            <option value="2">OBC</option>
+            <option value="3">SC/ST</option>
           </select>
+          <p class="cast-field-msg text-danger ml-2"></p>
         </div>
         <div class="form-field col-lg-6">
           <label class="lable w-25">Reglion</label>
-          <select class="custom-select w-50 form-select-sm" id="inputGroupSelect01">
-            <option value="" disabled selected>Enter Reglion...</option>
-            <option value="1">...</option>
-            <option value="2">...</option>
-            <option value="3">...</option>
+          <select class="custom-select w-50 form-select-sm" id="inputGroupSelect01" name="reglion">
+            <option value="0"  selected>Enter Reglion...</option>
+            <option value="1">Hindu</option>
+            <option value="2">Sikh</option>
+            <option value="3">Jain</option>
+            <option value="4">Muslim</option>
+            <option value="5">Christian</option>
           </select>
+          <p class="reg-field-msg text-danger ml-2"></p>
         </div>
         <div class="form-field col-lg-6">
-          <label class="lable w-25">Mother/Tongue</label>
+          <label class="lable w-25">Mother Tongue</label>
           <select class="custom-select w-50 form-select-sm" id="inputGroupSelect01">
-            <option value="" disabled selected>Enter tongue...</option>
-            <option value="1">...</option>
-            <option value="2">...</option>
-            <option value="3">...</option>
+            <option value="0"  selected>Enter tongue...</option>
+            <option value="1">Hindi</option>
+            <option value="2">Gujrati</option>
+            <option value="3">Punjabi</option>
           </select>
         </div>
         <div class="form-field col-lg-6">
           <label class="lable w-25">Blood Group</label>
-          <select class="custom-select w-50 form-select-sm" id="inputGroupSelect01">
-            <option value="" disabled selected>Select Group...</option>
+          <select class="custom-select w-50 form-select-sm" id="inputGroupSelect01" name="blood">
+            <option value="0"  selected>Select Group...</option>
             <option value="1">A+</option>
             <option value="2">A-</option>
             <option value="3">B+</option>
@@ -116,6 +131,7 @@
             <option value="3">O+</option>
             <option value="3">O-</option>
           </select>
+          <p class="blood-field-msg text-danger ml-2"></p>
         </div>
         <div class="form-field col-lg-6">
           <label for="alternatenumber" class="lable w-25">Nationality</label>
@@ -125,67 +141,71 @@
         </div>
         <div class="form-field col-lg-6">
           <label class="lable w-25">Country</label>
-          <select class="custom-select w-50 form-select-sm" id="inputGroupSelect01">
-            <option value="" disabled selected>Select Country...</option>
-            <option value="1">Ind</option>
-            <option value="2">US</option>
+          <select class="custom-select w-50 form-select-sm" id="inputGroupSelect01" name="country">
+            <option value="0" selected>Select Country...</option>
+            <option value="1">India</option>
+            <option value="2">America</option>
             <option value="3">Nepal</option>
             <option value="4">others</option>
           </select>
+          <p class="country-field-msg text-danger ml-2"></p>
         </div>
         <div class="form-field col-lg-6">
           <label class="lable w-25">State</label>
-          <select class="custom-select w-50 form-select-sm" id="inputGroupSelect01">
-            <option value="" disabled selected>Select State...</option>
+          <select class="custom-select w-50 form-select-sm" id="inputGroupSelect01" name="state">
+            <option value="0"  selected>Select State...</option>
             <option value="1">UP</option>
             <option value="2">MP</option>
             <option value="3">Delhi</option>
             <option value="4">other</option>
           </select>
+          <p class="state-field-msg text-danger ml-2"></p>
         </div>
         <div class="form-field col-lg-6">
           <label class="lable w-25">City</label>
-          <select class="custom-select w-50 form-select-sm" id="inputGroupSelect01">
-            <option value="" disabled selected>Select City...</option>
-            <option value="1">...</option>
-            <option value="2">...</option>
-            <option value="3">....</option>
+          <select class="custom-select w-50 form-select-sm" id="inputGroupSelect01" name="city">
+            <option value="0"  selected>Select City...</option>
+            <option value="1">Delhi</option>
+            <option value="2">Mumbai</option>
+            <option value="3">Banglore</option>
           </select>
+          <p class="city-field-msg text-danger ml-2"></p>
         </div>
         <div class="form-field col-lg-6">
-          <label for="Mobile" class="lable">Pin Code</label>
-          <input id="moblie" class="input-text" type="tel" name="" id="">
+          <label for="pincode" class="lable">Pin Code</label>
+          <input id="pincode" class="input-text pincode" type="tel" name="" id="">
+          <p class="pin-field-msg text-danger ml-2"></p>
         </div>
         <div class="form-field col-lg-6">
           <label class="lable w-25">Faculty Type</label>
           <select class="custom-select w-50 form-select-sm" id="inputGroupSelect01">
-            <option value="" disabled selected>Select Faculty...</option>
+            <option value="select" disabled selected>Select Faculty...</option>
             <option value="1">...</option>
             <option value="2">...</option>
             <option value="3">....</option>
           </select>
         </div>
         <div class="form-field col-lg-6">
-          <label for="fname" class="lable">Address 1
-          </label>
-          <input id="fname" class="input-text" type="text" name="" id="" required>
+          <label for="fname" class="lable">Address 1</label>
+          <input id="fname" class="input-text address" type="text" name="" id="" required>
+          <p class="add-field-msg text-danger ml-2"></p>
         </div>
         <div class="form-field col-lg-6">
-          <label for="fname" class="lable">Address 2
-          </label>
+          <label for="fname" class="lable">Address 2</label>
           <input id="fname" class="input-text" type="text" name="" id="" required>
         </div>
         
-        <div class="form-field m-4 col-lg-12 align-content-center justify-content-center">
-          <input type="submit" class="submit-btn" value="submit">
+        <div class="form-field m-4 col-lg-12 button ">
+          <button type="submit" id="submitbtn" class="submit-btn">&#128427;  save</button>
+          <button type="reset" id="resetbtn" class="reset-btn">&#8634; reset</button>
         </div>
-      </div>
-      </div>
+       </div>
+     </form>
+    </div>
   </section>
 
-
-
-
-  
+  <script src="app.js">
+    
+  </script>
 </body>
 </html>

@@ -7,17 +7,21 @@ body{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #b1bfd8;
-    background-image: linear-gradient(315deg, #b1bfd8 0%, #6782b4 74%);
+    /* background-color: #b1bfd8; */
+    background: #FC354C; 
+    background: -webkit-linear-gradient(to right, #0ABFBC, #FC354C);  
+    background: linear-gradient(to right, #0ABFBC, #FC354C); 
 }
 .adduser{
     max-width: 1000px;
     margin: 50px auto;
     position: relative;
-    box-shadow: 0 10px 30px 0px rgb(0, 0, 0,1);
+    box-shadow: 0 10px 40px 0px rgb(0, 0, 0,1);
     padding: 30px;
     background: #fff;
+    /* animation: name 5s linear infinite; */
 }
+
 .adduser .title{
     text-transform: uppercase;
     /* text-align: center; */
@@ -64,9 +68,14 @@ body{
     text-transform: capitalize;
     transition: transform 0.2 ease-in-out;
 }
-.conctact-from .submit-btn{
+.conctact-from .button{
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.conctact-from  .submit-btn{
     outline: none;
-    display: block;
+    display: inline-flex;
     border: 0;
     font-size: 16px;
     line-height: 1;
@@ -78,8 +87,33 @@ body{
     cursor: pointer;
     transition: all 0.3s linear;
 }
+
+
 .conctact-from .submit-btn:hover{
     box-shadow: 3px 3px 10px black;
+    background: #22a04c;
+}
+.conctact-from .reset-btn{
+    outline: none;
+    display: inline-flex;
+    border: 0;
+    font-size: 16px;
+    line-height: 1;
+    padding: 12px 35px;
+    border-radius: 30px;
+    background: #e43c26;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+.conctact-from .reset-btn:hover{
+    box-shadow: 3px 3px 10px black;
+    background: #ca3320;
+}
+.submit-btn:active,.reset-btn:active{
+    transform: scale(0.86);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 .conctact-from .form-field .gen{
     max-width: 40%;
@@ -95,6 +129,6 @@ body{
     bottom: 11px;
     line-height: 25px;
     font-weight: 400;
-    color: #5543ca;
+    color: #000000;
     cursor: text;
 }
